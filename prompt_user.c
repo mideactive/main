@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
 * prompt_user - prints $ to let user know the program is
 * ready to take their input

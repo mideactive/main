@@ -12,9 +12,40 @@
 #include <time.h>
 #include <stdbool.h>
 
+/**
+ *struct info - shell infos
+ *@final_exit: exit shell
+ *@ln_count: counts lines
+ */
+
+struct info
+{
+	int final_exit;
+	int ln_count;
+} info;
+/**
+ *struct builtin - Built in structures
+ *@env: built in env
+ *@exit: exit env
+ */
+struct builtin
+{
+	char *env;
+	char *exit;
+} builtin;
+/**
+ *struct flags - shell flags
+ *@interactive: interactive flags
+ */
+struct flags
+{
+	bool interactive;
+} flags;
+
 /* environment variables */
 extern char **environ;
 extern __sighandler_t signal(int __sig, __sighandler_t __handler);
+
 
 /* handle built ins */
 int checker(char **cmd, char *buf);
@@ -40,37 +71,5 @@ char *find_path(void);
 
 /* helper function for efficient free */
 void free_buffers(char **buf);
-
-/**
- *struct builtin - Built in structures
- *@env: built in env
- *@exit: exit env
- */
-
-struct builtin
-{
-	char *env;
-	char *exit;
-} builtin;
-
-/**
- *struct info - shell infos
- *@final_exit: exit shell
- *@ln_count: counts lines
- */
-
-struct info
-{
-	int final_exit;
-	int ln_count;
-} info;
-/**
- *struct flags - shell flags
- *@interactive: interactive flags
- */
-struct flags
-{
-	bool interactive;
-} flags;
 
 #endif /* SHELL_H */

@@ -1,0 +1,31 @@
+#include "shell.c"
+/**
+ *struct info - shell infos
+ *@final_exit: exit shell
+ *@ln_count: counts lines
+ */
+
+struct info
+{
+	int final_exit;
+	int ln_count;
+} info;
+/**
+ *struct builtin - Built in structures
+ *@env: built in env
+ *@exit: exit env
+ */
+struct builtin
+{
+	char *env;
+	char *exit;
+} builtin;
+/**
+ *struct flags - shell flags
+ *@interactive: interactive flags
+ */
+struct flags
+{
+	bool interactive;
+} flags;
+

@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
 * handle_builtin - handles execution of builtin functions
 * @command: tokenized commands
